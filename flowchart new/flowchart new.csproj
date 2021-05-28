@@ -1,0 +1,525 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F7E58823-D858-4608-93CA-076CA1FC083D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>flowchart_new</RootNamespace>
+    <AssemblyName>flowchart new</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>flowchart_new.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dataweb.NShape">
+      <HintPath>..\..\..\..\..\Public\Documents\NShape\bin\Debug\Dataweb.NShape.dll</HintPath>
+    </Reference>
+    <Reference Include="Dataweb.NShape.ElectricalModelObjects">
+      <HintPath>..\..\..\..\..\Public\Documents\NShape\bin\Debug\Dataweb.NShape.ElectricalModelObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="Dataweb.NShape.ElectricalShapes">
+      <HintPath>..\..\..\..\..\Public\Documents\NShape\bin\Debug\Dataweb.NShape.ElectricalShapes.dll</HintPath>
+    </Reference>
+    <Reference Include="Dataweb.NShape.FlowChartShapes">
+      <HintPath>..\..\..\..\..\Public\Documents\NShape\bin\Debug\Dataweb.NShape.FlowChartShapes.dll</HintPath>
+    </Reference>
+    <Reference Include="Dataweb.NShape.GeneralModelObjects">
+      <HintPath>..\..\..\..\..\Public\Documents\NShape\bin\Debug\Dataweb.NShape.GeneralModelObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="Dataweb.NShape.GeneralShapes">
+      <HintPath>..\..\..\..\..\Public\Documents\NShape\bin\Debug\Dataweb.NShape.GeneralShapes.dll</HintPath>
+    </Reference>
+    <Reference Include="Dataweb.NShape.SoftwareArchitectureShapes">
+      <HintPath>..\..\..\..\..\Public\Documents\NShape\bin\Debug\Dataweb.NShape.SoftwareArchitectureShapes.dll</HintPath>
+    </Reference>
+    <Reference Include="Dataweb.NShape.WinFormsUI">
+      <HintPath>..\..\..\..\..\Public\Documents\NShape\bin\Debug\Dataweb.NShape.WinFormsUI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="ExcelManager.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Record.cs" />
+    <Compile Include="Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Tag.cs" />
+    <Compile Include="Unit.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="bin\Debug\sample_debugger.xlsx" />
+    <None Include="Properties\DataSources\Dataweb.NShape.AdoNetStore.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.AdoNetStoreException.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.BoxBase.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.CachedRepository.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.CachedRepositoryException.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.Caption.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.CaptionedShapeBase.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.CircleBase+ControlPointIds.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.CircleBase.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.CircularArcBase.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.CommandEventArgs.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.CommandMenuItemDef.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.CommandsEventArgs.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.CompositeShapeAggregation.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.Counter.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.CreateInstanceDelegate.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.CreateModelObjectDelegate.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.CreateShapeDelegate.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.CursorProvider.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.CustomizableMetaFile.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.DelegateMenuItemDef+ActionExecuteDelegate.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.DelegateMenuItemDef.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.DiameterShapeBase+ControlPointIds.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.DiameterShapeBase.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.DiamondBase+ControlPointIds.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.DiamondBase.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.EllipseBase+ControlPointIds.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.EllipseBase.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.EllipseFigureShape.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.EntityFieldDefinition.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.EntityInnerObjectsDefinition.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.EntityPropertyDefinition.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.EntityType.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.Figure.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.FigureShape.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.FigureShapeRelation.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.FormatModelMapping+MappingType.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.FormatModelMapping.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.GenericModelObject.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.GenericModelObjectType.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.Geometry.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.GetPropertyDefinitionsDelegate.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.GroupMenuItemDef.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.GroupShapeAggregation.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.History.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.ICaptionedShape.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.IdFilter.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.IDisplayService.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.IEntity.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.IEntityType.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.ILayerCollection.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.ImageBasedShape+ControlPointIds.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.ImageBasedShape.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.IModelMapping.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.IModelObject.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.IReadOnlyModelObjectTypeCollection.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.IReadOnlyShapeTypeCollection.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.IRegistrar.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.IRepositoryReader.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.IRepositoryWriter.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.IShapeGroup.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.IsoscelesTriangleBase+ControlPointIds.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.IsoscelesTriangleBase.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.IStoreCache.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.IStyleSetProvider.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.LabelBase+ControlPointIds.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.LabelBase.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.Layer.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.LayerTypeDescriptor.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.LineFigureShape.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.LineShapeBase.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.MenuItemDef.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.Model.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.ModelMappingBase.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.ModelObjectBase.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.ModelObjectType.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.ModelObjectTypeCollection.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.MultiLineFigureShape.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.NamedImage.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.NotImplementedMenuItemDef.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.NumericModelMapping+MappingType.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.NumericModelMapping.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.PathBasedPlanarShape.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.PathFigureShape+Line.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.PathFigureShape+Node.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.PathFigureShape.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.PictureBase.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.PolylineBase.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.ProjectSettings.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.PropertyDescriptorDg.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.PropertyMappingIdAttribute.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.QuadrangleFigureShape.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.RectangleBase+ControlPointIds.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.RectangleBase.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.RectangularLineBase.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.RegularPolygoneBase.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.RepositoryReader.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.RepositoryWriter.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.Resolver.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.ResourceString.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.SeparatorMenuItemDef.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.ShapeAggregation.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.ShapeBase.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.ShapeConnection.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.ShapeGroup.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.Shaper.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.ShapeType.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.ShapeUtils.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.SquareBase.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.Store.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.Stroke.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.StrokeSequence.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.StyleModelMapping+MappingType.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.StyleModelMapping.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.TerminalId.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.TextBase.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.TextMeasurer.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.ToolCache.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.TriangleBase.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.TriangleFigureShape.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.TypeDescriptionProviderDg.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.TypeDescriptorDg.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Advanced.TypeDescriptorDgBase.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.CapStyle.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.CapStyleCollection.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.CharacterStyle.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.CharacterStyleCollection.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.ColorStyle.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.ColorStyleCollection.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.AddConnectionPointCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.AddLayerCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.AddShapesToLayersCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.AddVertexCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.AggregateCompositeShapeCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.AggregatedCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.AssignModelObjectCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.AssignShapesToLayersCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.AutoDisconnectShapesCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.Command.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.ConnectCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.ConnectionCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.CopyTemplateFromTemplateCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.CreateDesignCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.CreateDiagramCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.CreateModelObjectsCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.CreateShapesCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.CreateStyleCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.CreateTemplateCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.DeleteDesignCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.DeleteDiagramCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.DeleteModelObjectsCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.DeleteShapeCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.DeleteShapesCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.DeleteStyleCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.DeleteTemplateCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.DesignCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.DesignPropertySetCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.DiagramCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.DiagramPropertySetCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.DisconnectCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.EditLayerCommand+ChangedProperty.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.EditLayerCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.ExchangeTemplateCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.ExchangeTemplateShapeCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.GroupShapesCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.ICommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.InsertDiagramCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.InsertModelObjectsCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.InsertOrRemoveLayerCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.InsertOrRemoveModelObjectsCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.InsertOrRemoveShapeCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.InsertShapeCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.InsertVertexCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.LayerPropertySetCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.LiftShapeCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.ModelObjectPropertySetCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.MoveControlPointCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.MoveGluePointCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.MoveShapeByCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.MoveShapesCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.MoveShapesToCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.RemoveConnectionPointCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.RemoveLayerCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.RemoveShapesFromLayersCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.RemoveVertexCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.RotateShapesCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.SetCaptionTextCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.SetModelObjectParentCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.ShapeAggregationCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.ShapeCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.ShapePropertySetCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.ShapesCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.SplitCompositeShapeCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.StylePropertySetCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.TemplateCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Commands.UngroupShapesCommand.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Controllers.DesignController.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Controllers.DesignEventArgs.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Controllers.DiagramController.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Controllers.DiagramControllerNotFoundException.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Controllers.DiagramEventArgs.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Controllers.DiagramPresenterShapeClickEventArgs.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Controllers.DiagramPresenterShapesEventArgs.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Controllers.DiagramSetController.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Controllers.DiagramShapeEventArgs.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Controllers.IDiagramPresenter.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Controllers.ILayerView.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Controllers.IPropertyController.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Controllers.KeyEventArgsDg.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Controllers.LayerController.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Controllers.LayerEventArgs.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Controllers.LayerMouseEventArgs.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Controllers.LayerPresenter.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Controllers.LayerRenamedEventArgs.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Controllers.LayersEventArgs.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Controllers.LayerZoomThresholdChangedEventArgs.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Controllers.ModelController.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Controllers.ModelObjectSelectedEventArgs.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Controllers.ModelObjectsEventArgs.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Controllers.MouseEventArgsDg.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Controllers.PropertyController.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Controllers.PropertyControllerEventArgs.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Controllers.PropertyControllerPropertyChangedEventArgs.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Controllers.SelectedObjectsChangedCallback.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Controllers.ShapeEventArgs.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Controllers.ShapeMouseEventArgs.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Controllers.StyleEventArgs.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Controllers.TemplateController.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Controllers.TemplateControllerInitializingEventArgs.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Controllers.TemplateControllerModelObjectReplacedEventArgs.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Controllers.TemplateControllerPointMappingChangedEventArgs.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Controllers.TemplateControllerPropertyMappingChangedEventArgs.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Controllers.TemplateControllerStringChangedEventArgs.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Controllers.TemplateControllerTemplateEventArgs.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Controllers.TemplateControllerTemplateShapeReplacedEventArgs.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Controllers.TemplateEditorEventArgs.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Controllers.ToolEventArgs.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Controllers.ToolSetController.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Controllers.UserMessageEventArgs.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.ControlPointId.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.CreatePreviewStyleCallback.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Design.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Diagram.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.FillStyle.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.FillStyleCollection.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.FindStyleCallback.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.ICapStyle.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.ICapStyles.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.ICharacterStyle.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.ICharacterStyles.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.IColorStyle.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.IColorStyles.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.IFillStyle.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.IFillStyles.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.ILinearShape.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.ILineStyle.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.ILineStyles.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.IParagraphStyle.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.IParagraphStyles.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.IPlanarShape.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.IReadOnlyShapeCollection.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.IRepository.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.ISecurityDomainObject.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.ISecurityManager.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.IShapeCollection.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.IStyle.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.IStyleSet.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Layouters.ExpansionLayouter.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Layouters.FlowLayouter+FlowDirection.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Layouters.FlowLayouter.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Layouters.GridLayouter.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Layouters.ILayouter.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Layouters.LayouterBase.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Layouters.RepulsionLayouter.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.LibraryLoadedEventArgs.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.LinearShapeCreationTool.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.LineStyle.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.LineStyleCollection.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.LoadLibraryException.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.MissingCommandException.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.NShapeException.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.NShapeInterfaceNotSupportedException.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.NShapeInternalException.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.NShapeMappingNotSupportedException.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.NShapePropertyNotSetException.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.NShapeSecurityException.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.NShapeUnsupportedValueException.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.ParagraphStyle.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.ParagraphStyleCollection.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.PlanarShapeCreationTool.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.PointerTool.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Project.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.RelativePosition.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.RepositoryDesignEventArgs.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.RepositoryDiagramEventArgs.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.RepositoryModelEventArgs.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.RepositoryModelObjectEventArgs.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.RepositoryModelObjectsEventArgs.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.RepositoryProjectEventArgs.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.RepositoryShapeConnectionEventArgs.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.RepositoryShapeEventArgs.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.RepositoryShapesEventArgs.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.RepositoryStyleEventArgs.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.RepositoryTemplateEventArgs.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.RepositoryTemplateShapeReplacedEventArgs.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.RequiredPermissionAttribute.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.RoleBasedSecurityManager.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.SelectionTool.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Shape.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.ShapeCollection.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.ShapeConnectionInfo.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.ShapeDuplicator.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.SqlStore.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.StandardCapStyleNames.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.StandardCharacterStyleNames.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.StandardColorStyleNames.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.StandardFillStyleNames.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.StandardLineStyleNames.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.StandardParagraphStyleNames.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.StandardStyleNames.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Style.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.StyleTypeDescriptionProvider.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.StyleTypeDescriptor.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Template.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.TemplateTool.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.TextPadding.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.Tool.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.ToolExecutedEventArgs.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.XmlStore+BackupFileGenerationMode.datasource" />
+    <None Include="Properties\DataSources\Dataweb.NShape.XmlStore.datasource" />
+    <None Include="Properties\DataSources\Dataweb.Utilities.ISimulatedAnnealingProblem.datasource" />
+    <None Include="Properties\DataSources\Dataweb.Utilities.SimulatedAnnealingSolver.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\compile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\debug.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\step_into.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\step_next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toolStripButton1.Image.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>6</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="NewFolder1\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

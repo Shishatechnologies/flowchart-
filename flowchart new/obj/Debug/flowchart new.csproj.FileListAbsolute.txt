@@ -1,0 +1,24 @@
+C:\Users\HP\source\repos\flowchart new\flowchart new\bin\Debug\flowchart new.exe.config
+C:\Users\HP\source\repos\flowchart new\flowchart new\bin\Debug\flowchart new.exe
+C:\Users\HP\source\repos\flowchart new\flowchart new\bin\Debug\flowchart new.pdb
+C:\Users\HP\source\repos\flowchart new\flowchart new\obj\Debug\flowchart new.csprojAssemblyReference.cache
+C:\Users\HP\source\repos\flowchart new\flowchart new\obj\Debug\flowchart_new.Form1.resources
+C:\Users\HP\source\repos\flowchart new\flowchart new\obj\Debug\flowchart_new.Properties.Resources.resources
+C:\Users\HP\source\repos\flowchart new\flowchart new\obj\Debug\flowchart_new.Resource1.resources
+C:\Users\HP\source\repos\flowchart new\flowchart new\obj\Debug\flowchart new.csproj.GenerateResource.cache
+C:\Users\HP\source\repos\flowchart new\flowchart new\obj\Debug\flowchart new.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\flowchart new\flowchart new\obj\Debug\flowchart new.exe
+C:\Users\HP\source\repos\flowchart new\flowchart new\obj\Debug\flowchart new.pdb
+C:\Users\HP\source\repos\flowchart new\flowchart new\obj\Debug\flowchart new.csproj.ResolveComReference.cache
+C:\Users\HP\source\repos\flowchart new\flowchart new\bin\Debug\Dataweb.NShape.dll
+C:\Users\HP\source\repos\flowchart new\flowchart new\bin\Debug\Dataweb.NShape.ElectricalModelObjects.dll
+C:\Users\HP\source\repos\flowchart new\flowchart new\bin\Debug\Dataweb.NShape.ElectricalShapes.dll
+C:\Users\HP\source\repos\flowchart new\flowchart new\bin\Debug\Dataweb.NShape.FlowChartShapes.dll
+C:\Users\HP\source\repos\flowchart new\flowchart new\bin\Debug\Dataweb.NShape.GeneralModelObjects.dll
+C:\Users\HP\source\repos\flowchart new\flowchart new\bin\Debug\Dataweb.NShape.GeneralShapes.dll
+C:\Users\HP\source\repos\flowchart new\flowchart new\bin\Debug\Dataweb.NShape.SoftwareArchitectureShapes.dll
+C:\Users\HP\source\repos\flowchart new\flowchart new\bin\Debug\Dataweb.NShape.WinFormsUI.dll
+C:\Users\HP\source\repos\flowchart new\flowchart new\bin\Debug\Dataweb.NShape.xml
+C:\Users\HP\source\repos\flowchart new\flowchart new\bin\Debug\Dataweb.NShape.WinFormsUI.xml
+C:\Users\HP\source\repos\flowchart new\flowchart new\obj\Debug\flowchart new.csproj.CopyComplete
+C:\Users\HP\source\repos\flowchart new\flowchart new\obj\Debug\flowchart_new.Form2.resources
